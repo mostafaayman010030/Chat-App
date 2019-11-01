@@ -219,7 +219,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-Zh-OVy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-Zh-OVy" customClass="buttonconfig" customModule="Fdfada" customModuleProvider="target">
                                 <rect key="frame" x="68.666666666666686" y="351" width="277" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -229,6 +229,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerrediousbtn">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSa-aC-Ct8">
                                 <rect key="frame" x="15" y="20" width="50" height="46"/>
@@ -296,7 +301,7 @@
                                 </state>
                                 <connections>
                                     <action selector="close:" destination="wBO-oz-zSv" eventType="touchUpInside" id="GeU-03-h3b"/>
-                                    <segue destination="3Wm-R6-yjW" kind="unwind" unwindAction="backtochannelWithBack:" id="YYq-jN-d2s"/>
+                                    <segue destination="3Wm-R6-yjW" kind="unwind" unwindAction="backtochannelWithBack:" id="QN8-T3-I4s"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3b-b3-zsc" customClass="te">
@@ -369,7 +374,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgx-ft-oJJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgx-ft-oJJ" customClass="buttonconfig" customModule="Fdfada" customModuleProvider="target">
                                 <rect key="frame" x="74.666666666666686" y="666" width="265" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -382,12 +387,20 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.64005829020000005" green="0.0" blue="0.18695642209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerrediousbtn">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JfH-yw-Efj"/>
                                         <exclude reference="i81-Lj-f1Z"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="CreateAccountfunc:" destination="8Fx-x7-acX" eventType="touchUpInside" id="Bol-fo-1N9"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mXD-P5-ksz">
                                 <rect key="frame" x="144.66666666666666" y="364" width="124.99999999999997" height="125"/>
@@ -411,6 +424,9 @@
                                         <exclude reference="A7s-XD-PYa"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="ChooseCharacter:" destination="8Fx-x7-acX" eventType="touchUpInside" id="4Wk-1p-hg3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-dr-NAs">
                                 <rect key="frame" x="103.66666666666669" y="549" width="207" height="20"/>
@@ -428,6 +444,9 @@
                                         <exclude reference="hnw-UF-iPY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="bgcolor:" destination="8Fx-x7-acX" eventType="touchUpInside" id="mDa-j4-CbV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -467,6 +486,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="xoG-Sh-b5r"/>
+                    <connections>
+                        <outlet property="email" destination="mJ3-bc-Ixf" id="aLH-hw-XRS"/>
+                        <outlet property="password" destination="3rt-Lq-WxY" id="Yhp-hG-8ia"/>
+                        <outlet property="photo" destination="mXD-P5-ksz" id="hB7-dB-gJb"/>
+                        <outlet property="username" destination="Lkh-Aj-aJm" id="xES-a1-brl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrq-rH-DOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3Wm-R6-yjW" userLabel="Exit" sceneMemberID="exit"/>

@@ -7,15 +7,26 @@
 //
 
 import UIKit
+@IBDesignable
+class buttonconfig: UIButton {
 
-class Button: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBInspectable var cornerrediousbtn:CGFloat=5.0{
+        didSet{
+            self.layer.cornerRadius=cornerrediousbtn
+        }
     }
-    */
+    
+    
+    
+    override  func awakeFromNib() {
+        self.setupview()
+    }
+    override func prepareForInterfaceBuilder() {
+        self.prepareForInterfaceBuilder()
+        self.setupview()
+    }
+   func setupview(){
+       self.layer.cornerRadius=cornerrediousbtn
+   }
 
 }
